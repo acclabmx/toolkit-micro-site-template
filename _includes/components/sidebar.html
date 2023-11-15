@@ -20,7 +20,7 @@
               <i class="menu-icon fa fa-chevron-left"></i>
               {% endif %}
               
-              {% assign submenu_pages = site.pages | where: 'menu_parent', page.menu | sort: 'nav_order' %}
+              {% assign submenu_pages = site.pages | where: 'parent_order', page.menu | sort: 'nav_order' %}
               {% if submenu_pages.size > 0 %}
                 <ul class="submenu-list">
                   {% for submenu_page in submenu_pages %}
